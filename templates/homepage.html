@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>home</title>
+    {% include 'cdnlines.html' %}
+  </head>
+  <style media="screen">
+    .jumbotron{
+      margin:50px;
+    }
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-4 col-md-4">
+          <div class="jumbotron text-center">
+            <h1>Home Page</h1>
+            <a href="{% url 'register' %}"class="btn btn-outline-success ">Register</a>
+            <a href="{% url 'login' %}"class="btn btn-outline-danger">Login</a>
+            <a href="{% url 'logout' %}"class="btn btn-outline-dark">Logout</a><br>
+            <h2>{{request.user}}</h2>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
